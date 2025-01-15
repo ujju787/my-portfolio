@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #000021;
+  font-family: "Courier New", Courier, monospace;
+}
+/* only for border removed after develop */
+
+/* .projects {
+  border: 2px solid red;
+} */
+/* general styling  */
+.box,
+.box2 {
+  display: flex;
+  justify-content: evenly;
+}
+.projects {
+  margin: 1rem;
+  height: 30vh;
+  width: 50vw;
+  color: aqua;
+  text-align: center;
+}
+.projects img,
+.projects video {
+  height: 25vh;
+  width: 22vw;
+  border-radius: 1.2rem;
+}
+
+header {
+  color: whitesmoke;
+  text-align: center;
+  margin: 2rem;
+}
+@media screen and (max-width: 768px) {
+  .box,
+  .box2 {
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .projects {
+    margin: 1rem;
+    height: 30vh;
+    width: 70vw;
+    color: aqua;
+    text-align: center;
+  }
+  .projects img,
+  .projects video {
+    height: 25vh;
+    width: 75vw;
+    border-radius: 1.2rem;
+  }
+}

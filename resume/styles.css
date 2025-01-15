@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* general styling */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#line {
+  border: 1px solid grey;
+}
+body {
+  background-color: #000021;
+  font-family: "Poppins", "Baloo 2", sans-serif;
+}
+/* navbar styling */
+#navbar .nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #000018;
+  color: whitesmoke;
+  height: 10vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  position: absolute;
+  right: 1rem;
+}
+li a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 0rem 1rem;
+  font-weight: 600;
+}
+li a:hover {
+  color: green;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+li a:focus {
+  color: orange;
+}
+
+.logo img {
+  border-radius: 100%;
+  height: 3rem;
+}
+.portfolio-name {
+  font-size: 1.5rem;
+}
+
+/* Hamburger icon styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: whitesmoke;
+}
+#menu-toggle {
+  display: none;
+}
+@media (max-width: 800px) {
+  .portfolio-name {
+    font-size: 1.5rem;
+    width: 30rem;
+    /* text-align: center; */
+  }
+  #navbar .nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .menu ul li {
+    position: none;
+  }
+
+  #menu-toggle:checked + .hamburger + .menu ul {
+    display: flex;
+  }
+
+  /* Hamburger icon becomes visible on small screens */
+  .hamburger {
+    display: flex;
+  }
+  .menu ul {
+    display: none;
+    flex-direction: row;
+    position: absolute;
+    top: 4.4rem;
+    border-radius: 0.3rem;
+    right: 0;
+    padding: 0.4rem 0.3rem;
+    width: 100%;
+    background-color: #000019;
+    z-index: 1000;
+  }
+  .menu ul {
+    justify-content: center;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  /* .hamburger {
+    margin-top: 0rem;
+  } */
+}
+@media (max-width: 1000px) {
+  #navbar .nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .portfolio-name {
+    padding-left: 6rem;
+  }
+}
+@media (max-width: 480px) {
+  .portfolio-name {
+    padding: 0 0 0 0rem;
+    text-align: center;
+  }
+}

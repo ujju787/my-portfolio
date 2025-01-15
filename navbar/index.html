@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head http-equiv="X-UA-Compatible" content="IE=7">
+    <title>navbar</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      /* general styling */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /*background-color: #000021;*/
+        font-family: "Poppins", "Baloo 2", sans-serif;
+      }
+
+      /* nav bar start  */
+      #navbar .nav {
+        padding: 1rem;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #000018;
+        color: whitesmoke;
+        height: 10vh;
+      }
+
+      .logo img {
+        border-radius: 100%;
+        height: 3rem;
+      }
+
+      .portfolio-name {
+        font-size: 1.5rem;
+        animation: fadeout 1s ease-in-out;
+        width: 30rem;
+      }
+
+      /* menu bar  */
+      .menu {
+        display: flex;
+        align-items: center;
+        transition: width 0.6s linear;
+      }
+
+      .menu ul {
+        display: flex;
+        justify-content: space-between;
+
+        position: absolute;
+        right: 3rem;
+        transition: width 0.6s linear;
+        overflow: hidden;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      li a {
+        text-decoration: none;
+        color: whitesmoke;
+        padding: 0rem 1rem;
+        font-weight: 600;
+      }
+
+      li a:hover {
+        color: green;
+        cursor: pointer;
+        font-size: 1.1rem;
+        font-weight: 800;
+      }
+
+      li a:active {
+        color: orange;
+      }
+
+      li a:focus {
+        color: green;
+      }
+
+      .navbar2 {
+        background-color: yellow;
+        display: flex;
+        opacity: 0;
+        justify-content: space-evenly;
+        transform: translateY(-100%);
+        transition: 0.5s ease, transform 0.5s ease;
+        background-color: #000018;
+        margin-top: 0.1rem;
+      }
+
+      .show {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      .btn {
+        display: none;
+      }
+
+      nav ul li {
+        transform: rotateY(0deg) translateX(100rem);
+        opacity: 0;
+        transition: transform 0.6s linear, opacity 0.6s linear;
+      }
+
+      nav.active ul li {
+        opacity: 1;
+        transform: rotateY(360deg) translateX(0rem);
+      }
+
+      .icon {
+        background-color: #000021;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        height: 30px;
+        width: 30px;
+      }
+
+      .icon:focus {
+        outline: 0;
+      }
+
+      .icon .line {
+        background-color: #5290f9;
+        height: 2px;
+        width: 20px;
+        position: absolute;
+        top: 10px;
+        left: 5px;
+        transition: transform 0.6s linear;
+      }
+
+      .icon .line2 {
+        top: auto;
+        bottom: 10px;
+      }
+
+      nav.active .icon .line1 {
+        transform: rotate(-765deg) translateY(5.5px);
+      }
+
+      nav.active .icon .line2 {
+        transform: rotate(765deg) translateY(-5.5px);
+      }
+
+      /* menu bar ends */
+
+      /*media queries for making it responsive */
+      /* media queris for max width 1000px */
+      @media (max-width: 1000px) {
+        #navbar .nav {
+          display: flex;
+          justify-content: flex-start;
+        }
+
+        .portfolio-name {
+          padding-left: 8rem;
+        }
+      }
+
+      /* media query for tablets */
+      @media (max-width: 800px) {
+        #navbar {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        #navbar .nav {
+          display: flex;
+          justify-content: space-around;
+          width: 100%;
+        }
+
+        .portfolio-name {
+          font-size: 1.5rem;
+          width: 30rem;
+          animation: fadeout 1s ease-in-out;
+          /* text-align: center; */
+        }
+
+        .btn {
+          display: block;
+        }
+
+        /* responsive  menu bar */
+        .menu ul li {
+          position: none;
+        }
+
+        .menu ul {
+          display: none;
+          flex-direction: row;
+          position: absolute;
+          top: 3.9rem;
+          border-radius: 0.3rem;
+          right: 0;
+          padding: 0.4rem 0.3rem;
+          width: 100%;
+          background-color: #000019;
+          z-index: 1000;
+          animation: fadeIn 1s ease-in-out;
+        }
+
+        .menu ul {
+          justify-content: center;
+        }
+      }
+
+      /* media queris for min 800px */
+      @media screen and (min-width: 800px) {
+
+        .navbar2,
+        .show {
+          display: none;
+        }
+      }
+
+      /* media queris for smaller screen devices */
+      @media (max-width: 480px) {
+        .portfolio-name {
+          padding: 0 0 0 0rem;
+          text-align: center;
+        }
+      }
+
+      /* animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateZ(0px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(20px);
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 0;
+          transform: translateZ(0px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateZ(20px);
+        }
+      }
+
+      /* animation ends */
+
+      /* another css */
+    </style>
+  </head>
+
+<body>
+  <section id="navbar">
+    <!-- navbar starts -->
+    <div class="nav">
+      <!-- for logo -->
+      <div id="logo" class="logo"> <img id="img" src="../assets/cse.jpg" alt="img"></img></div>
+
+      <!-- for name ujjwal portfolio -->
+      <div class="portfolio-name">
+        <h3 id="head"> Ujjwal's Portfolio</h3>
+      </div>
+      <!-- for button  -->
+      <button class="icon btn" id="menuBtn">
+        <div class="line line1 "></div>
+        <div class="line line2"></div>
+        <div style=" top:3px ;bottom:10px;" class="line  line2 "></div>
+
+      </button>
+
+      <!-- menu card -->
+      <nav class="menu nav1" id="nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../contact/index.html">Contact</a></li>
+          <li><a href="../projects/index.html">Projects</a></li>
+          <li><a href='../resume/index.html'>Resume</a></li>
+          <button class="icon" id="toggle">
+            <div class="line line1 "></div>
+            <div class="line line2"></div>
+            <div style=" top:3px;bottom:10px;" class="line  line2 " id="line3"></div>
+
+          </button>
+        </ul>
+      </nav>
+
+  </section>
+  <!-- menu bar for responsive smaller screen sizes -->
+  <nav class="menu navbar2">
+
+    <li class="home"><a href="../index.html">Home</a></li>
+    <li class="home"><a href="../contact/index.html">Contact</a></li>
+    <li class="home"><a href="../projects/index.html">Projects</a></li>
+    <li class="home"><a href='../resume/index.html'>Resume</a></li>
+  </nav>
+
+
+  <script>
+    // for toggle menu in responsive smaller screens
+    let navbar = document.querySelector(".nav1");
+    let navbar2 = document.querySelector(".navbar2");
+    let menuBtn = document.querySelector("#menuBtn");
+    // const menubtn = document.querySelector(".btn");
+
+    menuBtn.onclick = () => {
+      if (navbar.classList.contains("hide")) {
+        navbar.classList.remove("hide");
+        navbar2.classList.remove("show");
+        console.log("i am if");
+      } else {
+        navbar.classList.add("hide");
+        navbar2.classList.add("show");
+
+        console.log("I am elseo");
+      }
+    };
+    // for toggle menubar
+    const toggle = document.getElementById("toggle");
+    const nav = document.getElementById("nav");
+    let icons = document.querySelector("#line3");
+    // toggle.addEventListener("click", () => nav.classList.toggle("active"));
+    toggle.onclick = () => {
+      if (nav.classList.contains("active")) {
+        nav.classList.remove("active");
+        icons.style.visibility = "visible";
+        console.log("none");
+      } else {
+        nav.classList.add("active");
+        icons.style.visibility = "hidden";
+        console.log("block");
+      }
+    };
+
+    console.log("code completed");
+
+    // if (nav.classList.contains("active")) {
+    //   icons.classList.remove("line");
+    //   console.log("none");
+    // } else {
+    //   console.log("block1");
+    //   icons.classList.add("line");
+    //   console.log("block2");
+    // }
+    // console.log("code not completed");
+
+  </script>
+
+  <!-- <script src="script.js"></script> -->
+  </section>
+
+</html>

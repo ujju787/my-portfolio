@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* general styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#line {
+  border: 1px solid grey;
+}
+body {
+  background-color: #000021;
+  font-family: "Poppins", "Baloo 2", sans-serif;
+}
+
+/* styling section 2 */
+#section {
+  display: flex;
+  justify-content: center;
+}
+.box1 {
+  margin-top: 5rem;
+}
+
+p,
+#div {
+  color: whitesmoke;
+}
+#name {
+  color: orangered;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#elements {
+  color: green;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+video {
+  height: 20rem;
+  border-radius: 100%;
+}
+/* styling section 3 */
+.skill-section h2 {
+  color: whitesmoke;
+  margin: 0.3rem 0.5rem;
+}
+#skill ul li {
+  color: white;
+  margin: 0.1rem 0rem 0.1rem 2rem;
+}
+#footer {
+  display: flex;
+  justify-content: center;
+  color: grey;
+  font-size: 0.7rem;
+  padding: 2rem 0rem 1rem 0rem;
+  position: static;
+  bottom: 0;
+}
+@media (max-width: 800px) {
+  /* for section 2 */
+  #section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box1 {
+    margin-top: 4rem;
+    font-size: 1.5rem;
+  }
+  #elements {
+    color: green;
+    font-weight: 900;
+    font-size: 1.3rem;
+  }
+  video {
+    margin-top: 1rem;
+    height: 10rem;
+    border-radius: 100%;
+  }
+  /* styling section 3 */
+  .skill-section h2 {
+    text-align: center;
+  }
+  #skill ul li {
+    color: white;
+    margin: 0.1rem 0rem 0.1rem 2rem;
+  }
+  #skill ul {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 480px) {
+}
+
+/* logo  */
+.rotate {
+  width: 45px;
+  margin-left: 10px;
+  height: 45px;
+  border: 2px solid green;
+  border-radius: 100px;
+  position: relative;
+  display: flex;
+  border-top: 5px solid red;
+  justify-content: center;
+  align-items: center;
+  animation: spin 0.6s linear infinite;
+  /* animation: img 0.6s linear infinite; */
+  filter: drop-shadow(10px 5px 40px #002aff);
+  background-color: #d8d3d3;
+  color: black;
+
+  border-radius: 100px;
+}
+img:hover {
+  animation: img 1s linear infinite;
+  height: 40px;
+  width: 40px;
+}
+
+/* Animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 0;
+    transform: translateZ(0px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateZ(20px);
+  }
+}
+#section {
+  animation: fadeIn 1s ease-out;
+}

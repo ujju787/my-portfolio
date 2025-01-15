@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #000021;
+  color: whitesmoke;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#welcome {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  box-shadow: 2px 2px 20px #0b1d6b;
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #102a6b;
+  color: #ffffff;
+  animation: flyIn 2.5s ease-in, flyOut 2.5s 2.5s ease-out forwards;
+}
+h1 {
+  font-size: 4vw;
+  line-height: 1.2;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
+  }
+  .box {
+    width: 90%;
+    padding: 15px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 8vw;
+  }
+  .box {
+    padding: 10px;
+  }
+}
+@keyframes flyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes flyOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0) translateZ(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%) translateZ(100%) scale(0.5);
+  }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="nav-container"></div>
+    <section id="sect">
+      <div class="container">
+        <div class="form">
+          <div class="contact">
+            <span class="circle one"></span>
+            <span class="circle two"></span>
+            <h3 class="title">Let's get in touch</h3>
+            <p class="text">Fill up this form to contact me. Thank you!</p>
+
+            <div class="information">
+              <i class="fas fa-envelope-open-text icon"></i>
+              <p>uk.mishr99@gmail.com</p>
+            </div>
+
+            <div class="information">
+              <i class="fas fa-phone-alt icon"></i>
+              <p>+91 6205482672</p>
+            </div>
+
+            <!-- <div class="information">
+              <img src="img/location.jpg"class="icon"alt="Location" /><p>Dhanbad, Jharkhand</p>
+            </div> -->
+            <div class="social">
+              <p>Connect with me:</p>
+              <a href="#" class="social-icon"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <div
+                href="https://www.linkedin.com/in/ujjwal-kumar-mishra-4b43432a6/>"
+                class="social-icon"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+              <a href="https://www.instagram.com/uk.mishr/>" class="social-icon"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <form
+              action="https://formspree.io/f/xkgnkrlb"
+              method="post"
+              id="contactForm"
+            >
+              <h3 class="title">Contact Me</h3>
+              <div class="input">
+                <input
+                  name="name"
+                  type="text"
+                  id="name"
+                  placeholder=" "
+                  required
+                />
+                <label for="name">Name</label>
+              </div>
+              <div class="input">
+                <input
+                  name="email"
+                  type="email"
+                  id="email"
+                  placeholder=" "
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+              <div class="input">
+                <input
+                  name="tel"
+                  type="tel"
+                  id="phone"
+                  placeholder=" "
+                  required
+                />
+                <label for="phone">Phone</label>
+              </div>
+              <div class="input">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label for="message">Message</label>
+              </div>
+              <button type="submit" id="btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../javascript/script.js"></script>
+  </body>
+</html>
